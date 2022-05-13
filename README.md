@@ -30,12 +30,13 @@ Change the configuration for the SATOSA backend found in
 ./satosa/opt/satosa/plugins/backends/
 ```
 
-## Launch
-Start the application.
+## Start the application.
 
-**proxy-idp-nginx:** Revproxy  
-**proxy-idp-pyff:** mdq server  
-**proxy-idp-satosa:** SATOSA proxy
+Containers:  
+
+- **proxy-idp-nginx:** Revproxy  
+- **proxy-idp-pyff:** mdq server  
+- **proxy-idp-satosa:** SATOSA proxy
 
 Create and start containers.
 ```
