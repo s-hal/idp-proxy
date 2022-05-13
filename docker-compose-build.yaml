@@ -18,7 +18,4 @@ services:
       context: ./
       dockerfile: ./builder/py-builder.docker
     volumes:
-      - ./pyff/application:/application/pyff
-      - ./satosa/application:/application/satosa
       - ./wheelhouse:/wheelhouse
-    #entrypoint: tail -f /dev/null
