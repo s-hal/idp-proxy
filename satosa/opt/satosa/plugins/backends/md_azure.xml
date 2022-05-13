@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" ID="_7ab49f28-72b7-445d-83a3-3aad7f45a495" entityID="https://sts.windows.net/6bcd8005-339b-4099-8f25-2abb5f64130b/">
+  <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>MIIC8DCCAdigAwIBAgIQEj49tsAHvK1LJlpr7IqNLzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMDAzMDkwNjUwMzlaFw0yMzAzMDkwNjUwMzlaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5xksMfTG0oxLr9Nt6TJ4HCXclTRTKMSaX3cSmnWIbPmVPW/MdrnCOw+yskdRjjbWOCUjINOzJ9MKwIO6/rfjq70PCWQJ8a+RLSP1Hf93adpDq6AdcrpuTVhDHKXjvc2dcNaOAFZTzHM3OT1r0dXcp7p9LfjzH+GbzJoRVEwIOD4k+z3Y2Ixx0Nocz+UF6kIFuqgW3PXMR0IEK1ej5BM3XyxwamOSvNDB2qsPiUcfiXvsTlc1Q4Iof9xOGTiLqaKaTZoKrMKmRJnS6PQOhWIO7Xtbh82piyZaTG7nAWwphRc1r8qF4DZ5BviEgXuM80pcccw4T4BdX5UKEpSo1nllSQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQADlefQsYgUUYHQdW/nmdc/PlyJazoz0KzR1y13LKBYu3oxWuvLDuTsi+WT+JV7elzpGgRJjFwIUI83w5S7wTfD3ug9PWubMqy/Cz/9m+a/7vsbvW7yT2u/qHnkpodBQJmQelQ3DJOv6yJeQekF+NKoIsG2NESjvQSt2GIyOiB1xV//B3PSmwLa4q32H1Nwi9aF0CZQvFtBxF9rWIHn7syArKnY+K0O9Y+HwdVfdLcJj0udPdfqy9tvsJo3NQEDMizztuWs/VMdNVFpr0H+tfCB5gfc5qwq5b2OS3/mr6M+0CFRzBG54eEbz7HCY9nqPo0xWN4KGeBGI8jkAK9NvHff</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.microsoftonline.com/6bcd8005-339b-4099-8f25-2abb5f64130b/saml2"/>
+    <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+    <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.microsoftonline.com/6bcd8005-339b-4099-8f25-2abb5f64130b/saml2"/>
+    <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.microsoftonline.com/6bcd8005-339b-4099-8f25-2abb5f64130b/saml2"/>
+  </IDPSSODescriptor>
+</EntityDescriptor>

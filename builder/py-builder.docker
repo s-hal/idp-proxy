@@ -1,0 +1,38 @@
+# py-builder.docker
+FROM py-base
+
+RUN apt-get update && \
+    apt-get install -qyy \
+    -o APT::Install-Recommendis=false -o APT::Install-Suggests=false \
+    libffi-dev \
+    libssl-dev \
+    build-essential \
+    python3-dev \
+    locales \
+    swig \
+    libyaml-dev \
+    libyaml-dev \
+    libxml2-dev \
+    libxslt-dev \
+    libz-dev \
+    wget
+
+RUN locale-gen en_US.UTF-8
+
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+RUN . /appenv/bin/activate && \
+    pip3 install wheel
+
+ENV WHEELHOUSE=/wheelhouse
+ENV PIP_WHEEL_DIR=/wheelhouse
+ENV PIP_FIND_LINKS=/wheelhouse
+
+RUN mkdir /wheelhouse && \
+    mkdir /src
+
+ENTRYPOINT . /appenv/bin/activate; \
+           cd /src; \
+           bash -c 'for i in ${SOURCES//,/ }; do rm -rf /tmp/src; mkdir /tmp/src && wget -q -O- "${i}" | tar -xz -C /tmp/src --strip 1 && pip3 wheel /tmp/src/.; done'

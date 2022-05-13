@@ -1,0 +1,61 @@
+attributes:
+  norEduOrgNIN:
+     saml: [norEduOrgNIN]  
+  norEduPersonNIN:
+     saml: [norEduPersonNIN]
+  norEduPersonBirthDate:
+     saml: [norEduPersonBirthDate]
+  schacGender:
+     saml: [schacGender]
+  eduPersonPrincipalName:
+     saml: [eduPersonPrincipalName]
+  eduPersonEntitlement:
+     saml: [eduPersonEntitlement]
+  givenName:
+     saml: [givenName]
+  sn:
+     saml: [sn]
+  displayName:
+     saml: [displayName]
+  o:
+    saml: [o]      
+  street:
+    saml: [street]  
+  postalCode:
+     saml: [postalCode]
+  l:
+     saml: [l]
+  c:
+     saml: [c]
+  mail:
+     saml: [mail]
+  telephoneNumber:
+     saml: [telephoneNumber]
+  mobile:
+     saml: [mobile]
+  sisLegalGuardianFor:
+     saml: [sisLegalGuardianFor]
+  sisSchoolGrade:
+     saml: [sisSchoolGrade]
+  sisSchoolCareOf:
+     saml: [sisSchoolCareOf]
+  sisOrgDepartment:
+     saml: [sisOrgDepartment]
+  sisSchoolUnitCode:
+     saml: [sisSchoolUnitCode]
+  sisSchoolCourseStudent:
+     saml: [sisSchoolCourseStudent]
+  sisSchoolCourseTeacher:
+     saml: [sisSchoolCourseTeacher]
+# http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress:
+#     saml: [mail]
+#  http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname:
+#     saml: [givenName]
+#  http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name:
+#     saml: [eduPersonPrincipalName]
+#  http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname:
+#     saml: [sn]   
+
+#hash: [mail]
+#user_id_from_attrs: [mail]
+#user_id_to_attr: mail 

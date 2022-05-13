@@ -1,0 +1,37 @@
+# The SAML2 backend act as a SAML Service Provider (SP), making authentication requests to SAML Identity Providers (IdP).
+module: satosa.backends.saml2.SAMLBackend
+name: Saml2SP
+config:
+  sp_config:
+    key_file: /opt/satosa/pki/saml2_sp_backend.key
+    cert_file: /opt/satosa/pki/saml2_sp_backend.crt
+    attribute_map_dir: /opt/satosa/attributemaps
+    attribute_profile: /opt/satosa/internal_attributes.yaml
+    organization: {display_name: Skolfederaion OIDC Proxy, name: Skolfederaion OIDC Proxy, url: 'http://www.skolfederation.se'}
+    contact_person:
+    - {contact_type: technical, email_address: info@skolfederation.se, given_name: Technical}
+    - {contact_type: support, email_address: info@skolfederation.se, given_name: Support}
+    metadata:
+      local: [/opt/satosa/plugins/backends/md_adfs.xml, /opt/satosa/plugins/backends/md_azure.xml]
+    entityid: https://proxy-idp.labb.swefed.se
+    service:
+      sp:
+        requested_authn_context:
+          authn_context_class_ref:
+           - urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+           - urn:oasis:names:tc:SAML:2.0:ac:classes:TLSClient
+          comparison: exact
+        allow_unsolicited: true
+        endpoints:
+          assertion_consumer_service:
+          - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
+          discovery_response:
+          - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
+        want_response_signed: false
+        want_assertions_signed: true
+        name_id_format: ['urn:oasis:names:tc:SAML:2.0:nameid-format:persistent']
+#       name_id_format: ['urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified']
+#    xmlsec_binary: /usr/bin/xmlsec1
+  # disco_srv must be defined if there is more than one IdP in the metadata specified above
+  #disco_srv: https://fed.skolfederation.se/trial/ds/
+  disco_srv: https://discosrv.s3.eu-central-1.amazonaws.com/ds/index.html

@@ -1,0 +1,22 @@
+- when update:
+    - load:
+       #- https://fed.skolfederation.se/prod/md/skolfederation-3_1.xml /opt/pyff/skolfederation-3_1.crt
+       - https://fed.skolfederation.se/trial/md/skolfederation-trial-3_1.xml /opt/pyff/skolfederation-trial-3_1.crt
+    - break
+- when request:
+    - select
+    - pipe:
+        - when accept application/xml:
+             - xslt:
+                 stylesheet: tidy.xsl
+             - first
+             - finalize:
+                cacheDuration: PT15M
+                validUntil: P10D
+             - emit application/xml
+             - break
+        - when accept application/json:
+             - xslt:
+                 stylesheet: discojson.xsl
+             - emit application/json:
+             - break

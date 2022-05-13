@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="http://fs.example.com/adfs/services/trust">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIC2DCCAcCgAwIBAgIQXUEaJKODBo9CbX33QYd58DANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBmcy5leGFtcGxlLmNvbTAeFw0yMDAxMTUxNjA1MzVaFw0yMTAxMTQxNjA1MzVaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmluZyAtIGZzLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxwvwX5+qYvO8loFIBzQbjkKxWfZWM3VIN+zEoIFRkaDE78IApXD+CFTOk/pRghfSvwt+wt2rkLJ2fP10AD1v7/5nYLholURRufyobC8Deu/qvFhznUgeVCifsGnXhJ/xfnxrbwOUi3ZZFe8582PEempBfKUVcIoluiVFduv6Wo5LkDzMqOIZMoc+tYRFuq5jeRhzv6cpqT5FMmYuKdn3vaGYAsYKYTccDJ7m0JMfkW5nxXSRBA4TDdl0AsN61ziD6PPg2ScnnPKUb6L4tMX37Z4gg5vqY4gWQNio5DcouV50m4YYoS+alWP4B+v9Y/mHlV1SbhqgM0rSoL4LMTRLeQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCjfAD14Yg5RXPekXt2Cj97sJ9psHmxuZnHVsqgNEZ2SANPFY8k1ZaVWtXJxz0v8Akai2m4n9GhCKNolGCPrQT4wUQ8Oo+OwYo8YDM4STygBpD6ZCSGX43mIsPJII/tMO7d9dmtFT28n2s0hPaQXJZSD7WIq86ffZqei2YkLTblwaZDSZUMBbcT3Jxyj0aTG2aEEz8i/gr02jTjnqSVMCeRwAnS/MqRuqr3CVQ4N8QB0QVboP/xhKgSHI7eC3obLFjFYHBLREiSE977reZG5DsMYA/ujzJo7lk6x2Xr/+8Z/Hl31rNJD7IH3a6QTW3l2WNaOziG7DHFbuhBhQM0yGez</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIC3jCCAcagAwIBAgIQI4mrmfWrrJZPQlb/PiwegTANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDEyBBREZTIEVuY3J5cHRpb24gLSBmcy5leGFtcGxlLmNvbTAeFw0yMDAxMTUxNjA1MzZaFw0yMTAxMTQxNjA1MzZaMCsxKTAnBgNVBAMTIEFERlMgRW5jcnlwdGlvbiAtIGZzLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0JQFAmJT/a2/L4C+l1mUl6QwZec1cyzPPazcSCDl6lGFLvR5ur69PD5CUo2CHrRYUBoyFYjMAzKs++D5RE+HVDD3PKtEQJ0/jZ660/85+MYIApQ9Mg/kaDHLyFlcaVZ+tA3UQ1/vqGflUbzEHM41eZuoBK9QSVfiruPyevmK/RgYFzUskHC/1TTUa8edIpcAPiixBztCkJ2jPJC9YHQxznARp57ilWUQdRDKRi/tLAlaU4PZZB9cmepGMsKqtt3QgbHq2Uav5j1zevs6P3c55RsDmfCSdCxbDBpHJQcoZAIhL343N+wtGoItA6TsG0ma7BR6wdYhuLw61YokzTKxoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBAe9Pi9IyjvIPkPxCYUeAG4UZrs2TeGBc4wpyVfm73NTtXLMVxjHODpJpDXVH3OBmvkcBYqkZ/+WrGVpWC8aX46IaV73iZMoaBP7FVok22w03bCBMqjPTBca99GRwQ+TXWjU4Vg0aHx5yFMXGn7NsraZltsMapIaO/oCZAtp9uGrWYa1apQ78n6KgtACW86PsMAXcf3XKDxGyF1s6RqMd9/XPDGvJEvxXrY6Z+I39qbVGp3XFKvzanRTyHT6fjJMPGMQr8F/iKMBgdunb26f5FtDZEfD2HkH3m1vxd4KaIp+n/6wfSFkYTb3hmfaiNzBoCrapkSB9bwLsEMFnTL9Rx</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fs.example.com/adfs/ls/"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fs.example.com/adfs/ls/"/>
+  </md:IDPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">SweFed Test</md:OrganizationName>
+    <md:OrganizationName xml:lang="sv">SweFed Test</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">SweFed Test</md:OrganizationDisplayName>
+    <md:OrganizationDisplayName xml:lang="sv">SweFed Test</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">www.swefed.se</md:OrganizationURL>
+    <md:OrganizationURL xml:lang="sv">www.swefed.se</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+    <md:Company>Example AB</md:Company>
+    <md:GivenName>John</md:GivenName>
+    <md:SurName>Doe</md:SurName>
+    <md:EmailAddress>support@example.com</md:EmailAddress>
+    <md:TelephoneNumber>+46(0)12345678</md:TelephoneNumber>
+  </md:ContactPerson>
+</md:EntityDescriptor>

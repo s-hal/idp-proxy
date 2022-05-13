@@ -1,0 +1,24 @@
+version: '3.7'
+networks:
+  build:
+
+services:
+  py-base:
+    container_name: py-base
+    image: py-base
+    build:
+      context: builder/
+      dockerfile: py-base.docker
+
+  py-builder:
+    container_name: py-builder
+    environment:
+      SOURCES: https://github.com/IdentityPython/SATOSA/archive/refs/tags/v8.1.0.tar.gz,https://github.com/IdentityPython/pyFF/archive/refs/tags/2.0.0.tar.gz
+    build:
+      context: ./
+      dockerfile: ./builder/py-builder.docker
+    volumes:
+      - ./pyff/application:/application/pyff
+      - ./satosa/application:/application/satosa
+      - ./wheelhouse:/wheelhouse
+    #entrypoint: tail -f /dev/null
