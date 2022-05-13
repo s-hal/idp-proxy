@@ -1,4 +1,4 @@
-# Azure SAML proxy
+# Azure SAML Proxy
 
 **NOT FOR PRODUCTION**
 
